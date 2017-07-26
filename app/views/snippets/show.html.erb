@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @snippet.name %>
+</p>
+
+<p>
+  <strong>Bedrooms:</strong>
+  <%= @snippet.contents %>
+</p>
+
+<p>
+  <strong>Baths:</strong>
+  <%= @snippet.drafts %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @snippet.group_name %>
+</p>
+
+<%= link_to 'Edit', edit_snippet_path(@snippet) %> |
+<%= link_to 'Back', snippets_path %>
