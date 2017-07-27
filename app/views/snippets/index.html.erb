@@ -1,7 +1,6 @@
-<p id="notice"><%= notice %></p>
 
 <h1>Snippets</h1>
-
+<article>
 <table>
   <thead>
     <tr>
@@ -12,6 +11,8 @@
       <th colspan="4"></th>
     </tr>
   </thead>
+</article>
+
 
   <tbody>
     <% @snippets.each do |snippet| %>
@@ -22,12 +23,15 @@
         <td><%= snippet.group_name %></td>
         <td><%= link_to 'Show', snippet %></td>
         <td><%= link_to 'Edit', edit_snippet_path(snippet) %></td>
-        <td><%= link_to 'Destroy', snippet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Delete', snippet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
+<p id="notice"><%= notice %></p>
 
 <br>
-
+<% if current_user %>
 <%= link_to 'New Snippet', new_snippet_path %>
+  &nbsp;&nbsp;|&nbsp;&nbsp;
+<% end %>

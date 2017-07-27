@@ -25,7 +25,7 @@ class SnippetsController < ApplicationController
   # POST /snippets.json
   def create
     @snippet = Snippet.new(snippet_params)
-
+    @snippet.user_id = current_user.id
     respond_to do |format|
       if @snippet.save
         format.html { redirect_to @snippet, notice: 'Snippet was successfully created.' }
@@ -56,7 +56,7 @@ class SnippetsController < ApplicationController
   def destroy
     @snippet.destroy
     respond_to do |format|
-      format.html { redirect_to snippets_url, notice: 'Snippet was successfully destroyed.' }
+      format.html { redirect_to snippets_url, notice: 'Snippet Deleted.' }
       format.json { head :no_content }
     end
   end

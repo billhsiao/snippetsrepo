@@ -13,3 +13,22 @@
  *= require_tree .
  *= require_self
  */
+
+
+body {
+  background-color: #1A1A1A;
+  font-family: Inconsolata;
+  font-color: #FFDEDE;
+}
+a { color: inherit; }
+
+h1 {
+  color:#1A1A1A;
+  background-color: white;
+
+}
+
+article {
+  color: white;
+
+}
