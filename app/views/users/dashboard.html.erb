@@ -1,4 +1,8 @@
-<h1>dashboard</h1>
+<% content_for :custom_header do %>
+  <div class="custom-header">
+    <h1>dashboard</h1>
+  </div>
+<% end %>
 <% if current_user %>
 <%= link_to 'New Snippet', new_snippet_path %>
   &nbsp;&nbsp;|&nbsp;&nbsp;
