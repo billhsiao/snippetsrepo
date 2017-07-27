@@ -7,11 +7,11 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Inconsolata" />
-    
+
   </head>
 
   <body>
-    <p>
+    <%= link_to 'Snippets', root_path%>
       <% if current_user %>
         Logged in <%= current_user.username %>
         &nbsp;&nbsp;|&nbsp;&nbsp;
@@ -21,7 +21,6 @@
         &nbsp;&nbsp;|&nbsp;&nbsp;
         <%= link_to 'Sign Up', new_user_path %>
       <% end %>
-    </p>
     <%= yield %> <!-- meta view-->
   </body>
 </html>
