@@ -1,24 +1,7 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+##<a href="https://trello.com/b/JI2bBksK/snippets">Trello Link</a>
 
-Things you may want to cover:
 
-* Ruby version
+##<a href="https://snippetsrepo2.herokuapp.com/">Heroku </a>
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
