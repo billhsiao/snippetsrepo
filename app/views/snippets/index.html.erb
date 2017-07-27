@@ -1,5 +1,9 @@
 
-<h1>Snippets</h1>
+<h1>new snippet</h1>
+<% if current_user %>
+<%= link_to 'New Snippet', new_snippet_path %>
+  &nbsp;&nbsp;|&nbsp;&nbsp;
+<% end %>
 <article>
 <table>
   <thead>
@@ -31,7 +35,3 @@
 <p id="notice"><%= notice %></p>
 
 <br>
-<% if current_user %>
-<%= link_to 'New Snippet', new_snippet_path %>
-  &nbsp;&nbsp;|&nbsp;&nbsp;
-<% end %>

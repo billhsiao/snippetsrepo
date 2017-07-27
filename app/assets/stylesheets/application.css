@@ -16,19 +16,42 @@
 
 
 body {
+  margin: 0 auto;
   background-color: #1A1A1A;
   font-family: Inconsolata;
   font-color: #FFDEDE;
 }
-a { color: inherit; }
-
+a {
+  color: inherit;
+}
 h1 {
   color:#1A1A1A;
   background-color: white;
-
 }
-
 article {
   color: white;
-
+}
+div {
+  position:relative;
+  background-color: white;
+  font-color: #1A1A1A;
+  display: inline-block;
+  background-position: center;
+}
+.left {
+  float: left;
+  width: 125px;
+}
+.right {
+  float: right;
+  width: 125px;
+}
+.middle {
+  background-color: white;
+  font-color: white;
+  border-top: 3px solid black;
+  border-bottom: 10px solid black;
+  margin-left: 100px;
+  margin-right: 100px;
+  max-width: 100px;
 }

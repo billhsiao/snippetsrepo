@@ -11,16 +11,22 @@
   </head>
 
   <body>
-    <%= link_to 'Snippets', root_path%>
-      <% if current_user %>
-        Logged in <%= current_user.username %>
-        &nbsp;&nbsp;|&nbsp;&nbsp;
-        <%= link_to 'Log Out', session_path('dummy'), method: :delete %>
-      <% else %>
-        <%= link_to 'Log In', login_path %>
-        &nbsp;&nbsp;|&nbsp;&nbsp;
-        <%= link_to 'Sign Up', new_user_path %>
-      <% end %>
-    <%= yield %> <!-- meta view-->
+    <!--><div class="headerblock"></-->
+      <div class="left">
+        <%= link_to 'snippets', root_path%>
+      </div>
+      <div class="middle">
+        search
+      </div>
+      <div class="right">
+        <% if current_user %>
+          <%= current_user.username %>
+            <%= link_to 'sign out', session_path('dummy'), method: :delete %>
+          <% else %>
+            <%= link_to 'sign in', login_path %>
+            <%= link_to '/ up', new_user_path %>
+          <% end %>      <!--></div></-->
+        </div>
+      <%= yield %> <!-- meta view-->
   </body>
 </html>
