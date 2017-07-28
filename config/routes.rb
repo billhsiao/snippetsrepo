@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root 'snippets#index'
   get 'users/dashboard', to: 'users#dashboard'
+  post '/snippets/search', to: 'snippets#index', as: :search
 
   resources :snippets
   resources :users, only: [:new, :create]

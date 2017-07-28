@@ -4,7 +4,7 @@ class SnippetsController < ApplicationController
   # GET /snippets
   # GET /snippets.json
   def index
-    @snippets = Snippet.all
+    @snippets = Snippet.search(params[:search])
   end
   # GET /snippets/1
   # GET /snippets/1.json
