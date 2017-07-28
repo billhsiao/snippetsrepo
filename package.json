@@ -1,5 +1,8 @@
 {
   "name": "snippets2",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "bulma": "^0.4.4",
+    "milligram": "^1.3.0"
+  }
 }

@@ -2,6 +2,18 @@
 <html>
   <head>
     <title>Snippet Repo</title>
+
+          <!-- Google Fonts -->
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+
+      <!-- CSS Reset -->
+      <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+
+      <!-- Milligram CSS minified -->
+      <link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
+
+      <!-- You should properly set the path from the main file. -->
+
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -11,27 +23,23 @@
   </head>
 
   <body>
-    <!--><div class="headerblock"></-->
-      <div class="left">
-        <%= link_to 'snippets', root_path %>
-      </div>
-      <div class="middle">
-          <%= form_tag search_path do %>
-          <p>
-            <%= text_field_tag :search %>
-            <%= submit_tag "Search" %>
-          </p>
-        <% end %>
-      </div>
-      <div class="right">
+    <div class="container">
+      <div class="row">
+        <div class="column"><%= link_to 'snippets', root_path %></div>
+      <div class="column"><%= form_tag search_path do %><%= text_field_tag :search %></div>
+            <div class="column"><%= submit_tag "Search" %>
+        <% end %></div>
+        <div class="column">
         <% if current_user %>
             <%= link_to 'dashboard', users_dashboard_path %>
             <%= link_to 'sign out', session_path('dummy'), method: :delete %>
           <% else %>
             <%= link_to 'sign in', login_path %>
             <%= link_to '/ up', new_user_path %>
-          <% end %>      <!--></div></-->
+          <% end %>
         </div>
-      <%= yield %> <!-- meta view-->
+        </div>
+        </div>
+      <%= yield %>
   </body>
 </html>
