@@ -1,34 +1,30 @@
-<h1>snippets</h1>
+<h1>REMINDER</h1>
 <div class="middle">
 <% if current_user %>
-<%= link_to 'New Snippet', new_snippet_path %>
+<%= link_to 'New task', new_snippet_path %>
   &nbsp;&nbsp;|&nbsp;&nbsp;
 <% end %>
 </div>
-<article>
 <table>
   <thead>
     <tr>
-      <th>Snippet</th>
-      <th>Content</th>
-      <th>Published?</th>
-      <th>Grouping</th>
+      <th>✏️</th>
+      <th></th>
+      <th>🕐</th>
+      <th>Did you finish?</th>
       <th colspan="4"></th>
     </tr>
   </thead>
-</article>
-
 
   <tbody>
     <% @snippets.each do |snippet| %>
       <tr>
         <td><%= snippet.name %></td>
         <td><%= snippet.content %></td>
-        <td><%= snippet.draft %></td>
         <td><%= snippet.group_name %></td>
-        <td><%= link_to 'Show', snippet %></td>
-        <td><%= link_to 'Edit', edit_snippet_path(snippet) %></td>
-        <td><%= link_to 'Delete', snippet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= snippet.draft %></td>
+        <td><%= link_to 'why? ', edit_snippet_path(snippet) %></td>
+        <td><%= link_to ' 👍', snippet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
